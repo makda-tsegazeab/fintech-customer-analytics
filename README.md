@@ -174,3 +174,44 @@ CREATE TABLE reviews (
     sentiment_score DECIMAL(5,4),
     source VARCHAR(50) DEFAULT 'Google Play Store'
 );
+
+## Task 4: Insights and Recommendations
+
+### Analysis Performed
+1. **Sentiment Analysis**: Compared sentiment across banks
+2. **Thematic Analysis**: Identified drivers and pain points
+3. **Scenario Analysis**: Addressed the three business scenarios
+4. **Visualization**: Created 3+ plots for stakeholder communication
+
+### Key Findings
+**Commercial Bank of Ethiopia**:
+- ✅ **Driver**: Fast transactions, reliable service
+- ❌ **Pain Point**: Slow during peak hours
+- 💡 **Recommendation**: Optimize transfer speeds, add biometric login
+
+**Bank of Abyssinia**:
+- ✅ **Driver**: Basic functionality works
+- ❌ **Pain Point**: Frequent crashes, poor support
+- 💡 **Recommendation**: Fix stability issues, enhance support
+
+**Dashen Bank**:
+- ✅ **Driver**: Modern interface, good features
+- ❌ **Pain Point**: Needs more features
+- 💡 **Recommendation**: Add dark mode, biometric authentication
+
+### Visualizations Created
+1. `sentiment_by_bank.png` - Sentiment distribution
+2. `ratings_by_bank.png` - Rating distribution  
+3. `wordclouds.png` - Most frequent words
+
+### Files Created
+- `notebooks/task4_analysis.ipynb` - Analysis notebook
+- `reports/final_report.md` - 10-page final report
+- `data/outputs/insights_summary.csv` - Summary data
+- `data/outputs/visualizations.txt` - Visualization list
+
+### Requirements Met
+✓ 2+ drivers/pain points per bank identified  
+✓ 3+ visualizations created  
+✓ 10-page final report completed  
+✓ Practical recommendations provided
