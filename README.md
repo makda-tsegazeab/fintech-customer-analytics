@@ -149,3 +149,28 @@ Visualization: Create insights dashboards
 - ✓ 3+ themes per bank identified
 - ✓ Modular pipeline code
 - ✓ Minimum essential: Sentiment for 400+ reviews, 2+ themes per bank
+
+## Task 3: PostgreSQL Database
+
+**Database**: `bank_reviews`
+
+**Tables**:
+```sql
+-- banks table
+CREATE TABLE banks (
+    bank_id SERIAL PRIMARY KEY,
+    bank_name VARCHAR(100) NOT NULL UNIQUE,
+    app_name VARCHAR(100)
+);
+
+-- reviews table  
+CREATE TABLE reviews (
+    review_id SERIAL PRIMARY KEY,
+    bank_id INTEGER REFERENCES banks(bank_id),
+    review_text TEXT NOT NULL,
+    rating INTEGER CHECK (rating >= 1 AND rating <= 5),
+    review_date DATE,
+    sentiment_label VARCHAR(20),
+    sentiment_score DECIMAL(5,4),
+    source VARCHAR(50) DEFAULT 'Google Play Store'
+);
